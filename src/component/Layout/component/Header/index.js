@@ -7,20 +7,18 @@ const cx = classNames.bind(styles)
 function Header() {
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
-            <div className={cx('logo')}>
-                <img src={images.logo} alt='tiktok' />
-            </div>
+            <img src={images.logo} alt='tiktok' />
             <div className={cx("search")}>
                 <input placeholder="Search accounts videos" spellCheck={false} />
-                <button>
+                <button className={cx("clear")}>
                     <FontAwesomeIcon icon={faCircleXmark} />
                 </button>
-                <button className={cx("clear")}>
-                    <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
+                <button className={cx('loading')}>
+                    <FontAwesomeIcon icon={faSpinner} />
                 </button>
                 <button className={cx("search-btn")}>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>            
+                </button>
             </div>
             <div className={cx("action")}>Action</div>
         </div>
