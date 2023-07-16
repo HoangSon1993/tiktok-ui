@@ -3,12 +3,13 @@ import Button from "~/component/Button";
 import styles from './Menu.module.scss'
 
 const cx = classNames.bind(styles)
-function MenuItem({data}) {
-    return <Button className={cx('menu-item')}
+function MenuItem({data, onClick}) {
+    return (
+    <Button className={cx('menu-item')}
     leftIcon={data.icon}
-    to={data.to}
+    to={data.to} onClick={onClick}
     >{data.title}</Button>
-     
+    )
 }
 
 export default MenuItem;
