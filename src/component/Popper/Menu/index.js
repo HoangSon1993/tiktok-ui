@@ -39,7 +39,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
             offset={[12, 8]}
             placement="bottom-end"
             render={(attrs) => (
-                <div className={cx('menu-list')} tabindex="-1" {...attrs}>
+                <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>
                         {history.length > 1 && (
                             <Header
