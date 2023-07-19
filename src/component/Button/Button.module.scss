@@ -4,6 +4,7 @@
     justify-content: center;
     font-size: 1.6rem;
     font-weight: 700;
+    font-family: 'TiktokFont', sans-serif;
     min-width: 100px;
     padding: 9px 16px;
     cursor: pointer;
@@ -21,10 +22,11 @@
     }
 }
 
-.icon + .title, .title + .icon {
+.icon + .title,
+.title + .icon {
     margin-left: 8px;
 }
-.icon{
+.icon {
     display: inline-block;
     width: 24px;
     text-align: center;
@@ -35,9 +37,9 @@
     box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
     border-color: rgba(22, 24, 35, 0.12);
 
-    &:hover{
-        border-color: rgba(22,24,35,0.2);
-        background-color: rgba(22,24,35,0.03);
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
     }
 }
 .primary {

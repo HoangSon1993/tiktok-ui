@@ -9,7 +9,6 @@ import {
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
     faUser,
     faCoins,
     faGear,
@@ -25,6 +24,8 @@ import images from '~/assets/images';
 import AccountItem from '~/component/AccountItem';
 import Menu from '~/component/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
+import { MessageIcon, InboxIcon, UploadIcon } from '~/component/icons';
+import Image from '~/component/image'
 
 const cx = classNames.bind(styles);
 
@@ -139,7 +140,17 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content="Message" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -151,7 +162,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('use-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/a4467690714071b018d27ddb4b165535~c5_100x100.jpeg?x-expires=1689699600&x-signature=X3nfROYZgYZWeO0B5dsuh%2FO6mP4%3D"
                                 alt="Nguyen van A"
