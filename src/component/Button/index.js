@@ -1,5 +1,3 @@
-import { faLess } from '@fortawesome/free-brands-svg-icons';
-import { type } from '@testing-library/user-event/dist/type';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
