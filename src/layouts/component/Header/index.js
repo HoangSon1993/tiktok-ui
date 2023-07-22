@@ -14,7 +14,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
 
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import Button from '~/component/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -33,12 +33,12 @@ const MENU_ITEMS = [
             title: 'Language',
             data: [
                 {
-                    type: 'languege',
+                    type: 'language',
                     code: 'en',
                     title: 'English',
                 },
                 {
-                    type: 'languege',
+                    type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
                 },
@@ -61,7 +61,7 @@ function Header() {
     const handleMenuChange = (menuItem) => {
         console.log(menuItem);
         switch (menuItem.type) {
-            case 'languge':
+            case 'language':
                 //Handle change language
                 break;
             default:
@@ -94,7 +94,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     {' '}
                     <img src={images.logo} alt="tiktok" />
                 </Link>
