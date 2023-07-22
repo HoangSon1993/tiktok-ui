@@ -15,30 +15,30 @@ function Search() {
     // eslint-disable-next-line
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-    const [showResult, setShowResult] = useState(true);
+    const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const debounced = useDebounce(searchValue, 500);
+    const debouncedValue = useDebounce(searchValue, 500);
 
     const inputRef = useRef();
 
     useEffect(() => {
-        if (!debounced) {
+        if (!debouncedValue) {
             setSearchResult([]);
             return;
         }
 
-        const featchApi = async () => {
+        const fetchApi = async () => {
             setLoading(true);
 
-            const result = await searchServices.search(debounced);
+            const result = await searchServices.search(debouncedValue);
 
             setSearchResult(result);
 
             setLoading(false);
         };
-        featchApi();
-    }, [debounced]);
+        fetchApi();
+    }, [debouncedValue]);
 
     const handleClear = () => {
         setSearchValue('');

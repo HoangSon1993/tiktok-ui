@@ -8,7 +8,7 @@
     min-width: 100px;
     padding: 9px 16px;
     cursor: pointer;
-    background-color: var(--while);
+    background-color: var(--white);
     border: 1px solid transparent;
     user-select: none; //không cho select chữ ở button
 
@@ -43,7 +43,7 @@
     }
 }
 .primary {
-    color: var(--while);
+    color: var(--white);
     background-color: var(--primary);
     border-color: var(--primary);
     border-radius: 4px;
