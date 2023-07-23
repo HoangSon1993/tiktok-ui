@@ -24,6 +24,6 @@ Images.propTypes = {
     src: PropTypes.string,
     alt: PropTypes.string,
     className: PropTypes.string,
-    ref: PropTypes.string,
+    // ref: PropTypes.string,
 };
 export default forwardRef(Images);
